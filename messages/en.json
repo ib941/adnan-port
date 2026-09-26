@@ -3,100 +3,158 @@
     "brand": "ADNAN AL-THOUR",
     "hero": "Overview",
     "about": "About",
-    "expertise": "Expertise",
+    "experience": "Experience",
     "contact": "Contact",
-    "cta": "Get in Touch",
-    "langToggleLabel": "العربية"
+    "cta": "Get in Touch"
   },
   "Hero": {
-    "greeting": "Hello, I'm",
+    "title": "Operations Supervisor | E-Commerce Specialist",
     "name": "Adnan Al-Thour",
-    "title": "Operations Supervisor | E-commerce Expert",
-    "description": "Architecting resilient fulfillment architectures, optimizing complex end-to-end supply chains, and scaling high-velocity enterprise commerce operations with corporate precision.",
-    "primaryCta": "Explore Expertise",
-    "secondaryCta": "Initiate Discussion"
+    "headline": "Grounded operational leadership across physical sites and digital commerce.",
+    "bio": "Experienced operations supervisor with a practical background in both on-the-ground civil construction logistics and digital retail workflows. Focused on clear site coordination, reliable inventory control, and keeping day-to-day operations moving efficiently without bottlenecks.",
+    "primaryCta": "Connect on WhatsApp",
+    "secondaryCta": "Send an Email",
+    "tertiaryCta": "View Experience",
+    "cardTitle": "Operational Profile",
+    "cardSubtitle": "Core Background & Scope",
+    "cardDomain1Title": "Civil Construction & Site Supervision",
+    "cardDomain1Desc": "Contractor coordination, on-site safety compliance, materials logistics (Moka tenure).",
+    "cardDomain2Title": "Retail Management & Inventory",
+    "cardDomain2Desc": "Store P&L, stock integrity, receiving procedures, shrinkage reduction (Masar tenure).",
+    "cardDomain3Title": "Digital Commerce & Fulfillment",
+    "cardDomain3Desc": "Catalog accuracy, order packaging, courier coordination, last-mile dispatch.",
+    "cardLocationLabel": "Location",
+    "cardLocationVal": "Riyadh, Saudi Arabia",
+    "cardAvailabilityLabel": "Status",
+    "cardAvailabilityVal": "Open to operational leadership & advisory roles"
   },
   "About": {
-    "tag": "Strategic Profile",
-    "title": "Dual-Domain Operational Mastery",
-    "lead": "Bridging high-stakes physical construction logistics with high-velocity digital e-commerce ecosystems.",
-    "narrative": "True operational leadership demands versatility. My career is defined by an uncommon dual specialization: orchestrating heavy on-the-ground physical site logistics and engineering scalable digital retail workflows. Whether managing on-site contractor crews under strict safety deadlines or calibrating automated multi-channel fulfillment pipelines, I bring uncompromising corporate discipline, analytical precision, and systemic efficiency to every operation.",
-    "pillar1Title": "Physical Operations & Site Supervision",
-    "pillar1Subtitle": "On-the-ground execution, material logistics, and contractor leadership",
-    "pillar1Desc": "Directing complex on-site workflows, enforcing safety compliance standards, managing multi-tier subcontractor schedules, and ensuring zero-delay material delivery chains.",
-    "pillar1Points": [
-      "Rigorous material resource planning and site delivery tracking",
-      "Subcontractor coordination, quality assurance, and hazard control",
-      "Budget discipline and milestone-driven civil execution"
-    ],
-    "pillar2Title": "Digital Commerce & Systems Scaling",
-    "pillar2Subtitle": "Multi-channel catalog management, order fulfillment, and logistics pipelines",
-    "pillar2Desc": "Designing and optimizing high-frequency digital commerce operations—from inventory replenishment algorithms and warehousing protocols to automated last-mile dispatch.",
-    "pillar2Points": [
-      "End-to-end inventory auditing and multichannel sync",
-      "Fulfillment SLA optimization and courier performance tracking",
-      "Customer lifecycle management and predictive operations analytics"
-    ],
+    "tag": "PROFILE & APPROACH",
+    "title": "Hands-On Leadership with Practical Focus",
+    "lead": "Effective operations don't come from theories—they come from being present on the ground, understanding the team's needs, and keeping systems organized.",
+    "narrative": "My career has been built across two distinct environments: physical construction sites and digital retail platforms. Managing subcontractor crews and heavy material deliveries taught me strict safety standards and the value of clear schedules. Directing retail store operations and e-commerce fulfillment taught me the importance of inventory accuracy, fast order turnaround, and responsive customer service. In both worlds, my goal is straightforward: build reliable workflows that help teams execute smoothly.",
     "quote": "Operational excellence is not about reacting to bottlenecks—it is about designing resilient systems that make bottlenecks structurally impossible.",
-    "quoteRole": "Executive Operational Standard"
+    "quoteRole": "Operational Principle",
+    "tenetsTitle": "Core Operational Tenets",
+    "tenets": [
+      {
+        "num": "01",
+        "title": "Site Discipline & Safety First",
+        "desc": "Enforcing safety standards and clear task staging so crews work productively without avoidable hazards."
+      },
+      {
+        "num": "02",
+        "title": "Inventory & Order Accuracy",
+        "desc": "Keeping tight control over stock records, receiving audits, and packaging standards to eliminate shrinkage and errors."
+      },
+      {
+        "num": "03",
+        "title": "Hands-On Problem Solving",
+        "desc": "Staying close to the daily workflow to spot delays early and solve issues directly with the people doing the work."
+      },
+      {
+        "num": "04",
+        "title": "Transparent Communication",
+        "desc": "Setting clear expectations with subcontractors, suppliers, courier partners, and clients from day one."
+      }
+    ]
   },
   "Expertise": {
-    "tag": "Career Trajectory",
-    "title": "Professional Experience & Key Roles",
-    "subtitle": "A progressive track record across civil project supervision, retail store direction, and digital commerce operations.",
+    "tag": "CAREER PROGRESSION",
+    "title": "Professional Experience",
+    "subtitle": "Practical roles across construction site supervision, general store management, and digital commerce logistics.",
     "roles": {
       "moka": {
         "title": "Construction Site Supervisor",
         "company": "Moka",
         "period": "Key Project Tenure",
         "type": "Physical Operations & Logistics",
-        "description": "Directed complete on-site operations for critical structural projects, coordinating workforce deployment, heavy materials logistics, and subcontractor compliance under tight milestone commitments.",
-        "skills": ["Site Logistics", "Safety Compliance", "Subcontractor Oversight", "Resource Planning", "Quality Auditing"]
+        "description": "Directed day-to-day on-site operations for structural projects. Coordinated subcontractor teams, tracked heavy material deliveries, and ensured safety compliance according to civil engineering standards and project milestones.",
+        "skills": [
+          "Site Logistics & Materials Staging",
+          "Subcontractor Coordination",
+          "Safety Compliance & Inspections",
+          "Resource & Schedule Tracking",
+          "Quality Audits"
+        ]
       },
       "masar": {
         "title": "General Store Manager",
         "company": "Masar",
-        "period": "Executive Management",
-        "type": "Retail & Facility Leadership",
-        "description": "Held full P&L accountability, supply chain distribution, and inventory integrity for retail operations. Supervised daily personnel, reduced shrinkage, and established streamlined receiving procedures.",
-        "skills": ["Store Operations", "Inventory Control", "P&L Management", "Team Leadership", "Vendor Relations"]
+        "period": "Store Management",
+        "type": "Retail & Facility Operations",
+        "description": "Managed daily retail store operations, staff supervision, and inventory receiving. Focused on reducing shrinkage, improving stock reconciliation, and maintaining reliable supplier relations.",
+        "skills": [
+          "Retail Store Operations",
+          "Inventory Auditing & Shrinkage Control",
+          "Daily Staff Supervision",
+          "Supplier & Receiving Protocols",
+          "Customer Service Standards"
+        ]
       },
       "ecommerce": {
         "title": "E-commerce Store Manager",
         "company": "Enterprise Commerce",
         "period": "Digital Operations",
         "type": "Digital Commerce & Fulfillment",
-        "description": "Scaled digital store operations, managing catalog accuracy, automated order fulfillment, packaging standards, and conversion workflows across high-velocity sales channels.",
-        "skills": ["Catalog Architecture", "Order Fulfillment", "Inventory Optimization", "Analytics & KPIs", "Digital Merchandising"]
+        "description": "Supervised online store operations, catalog management, and order fulfillment. Streamlined picking and packing workflows to improve turnaround times and customer satisfaction.",
+        "skills": [
+          "Catalog & Product Listing Management",
+          "Order Fulfillment & Packaging Protocols",
+          "Inventory Reconciliation",
+          "Performance Tracking & KPIs",
+          "Digital Merchandising"
+        ]
       },
       "delivery": {
         "title": "Delivery Coordinator",
         "company": "Logistics & Fleet",
-        "period": "Supply Chain Dispatch",
+        "period": "Logistics & Dispatch",
         "type": "Last-Mile Distribution",
-        "description": "Orchestrated delivery fleets and third-party logistics carriers, optimizing route efficiency, tracking transit time metrics, and achieving superior on-time customer delivery rates.",
-        "skills": ["Last-Mile Logistics", "Route Planning", "Carrier SLA Audits", "Dispatch Scheduling", "Exception Management"]
+        "description": "Coordinated delivery couriers and last-mile shipments. Optimized daily routes, monitored carrier delivery times, and resolved shipment delays promptly.",
+        "skills": [
+          "Last-Mile Dispatch Scheduling",
+          "Route Planning & Courier Tracking",
+          "Carrier SLA Auditing",
+          "Delivery Exception Handling"
+        ]
       },
       "customerService": {
         "title": "Customer Service Representative",
         "company": "Client Relations",
-        "period": "Customer Experience",
-        "type": "Stakeholder Communication",
-        "description": "Handled high-volume client inquiries and escalation cases, converting customer pain points into actionable operational feedback and cultivating enduring brand loyalty.",
-        "skills": ["Escalation Resolution", "Customer Retention", "CRM Systems", "Feedback Analysis", "Communication Strategy"]
+        "period": "Client Communication",
+        "type": "Customer Experience",
+        "description": "Handled customer inquiries, order updates, and service escalations. Provided solutions directly to clients and fed operational feedback back into the logistics and store teams.",
+        "skills": [
+          "Inquiry & Escalation Resolution",
+          "Client Communication",
+          "CRM & Order Tracking Systems",
+          "Customer Feedback Reporting"
+        ]
       }
     }
   },
   "Contact": {
-    "tag": "Executive Contact",
-    "title": "Initiate an Executive Dialogue",
-    "subtitle": "Available for executive operations leadership mandates, e-commerce scale-up advisory, and high-impact logistics consulting.",
-    "phoneLabel": "Direct Telephone",
+    "tag": "GET IN TOUCH",
+    "title": "Direct Contact",
+    "subtitle": "Available for operational leadership roles, store management, site supervision, and logistics advisory in Riyadh and across the GCC.",
+    "phoneLabel": "Direct Phone",
     "phoneValue": "+966 50 451 7869",
-    "emailLabel": "Corporate Email",
+    "emailLabel": "Email",
     "emailValue": "Adnanalthour@gmail.com",
-    "locationLabel": "Base & Jurisdiction",
+    "locationLabel": "Base",
     "locationValue": "Riyadh, Saudi Arabia",
-    "availabilityNotice": "Currently accepting confidential operational leadership inquiries and advisory retainers across the GCC region."
+    "whatsAppLabel": "WhatsApp",
+    "whatsAppDesc": "Direct chat for inquiries or opportunities",
+    "whatsAppButton": "Message on WhatsApp",
+    "copyButton": "Copy",
+    "copiedToast": "Copied"
+  },
+  "Footer": {
+    "brand": "ADNAN AL-THOUR",
+    "role": "Operations Supervisor | E-Commerce Specialist",
+    "location": "Riyadh, Saudi Arabia",
+    "copyright": "Adnan Al-Thour. All rights reserved.",
+    "backToTop": "Back to Top"
   }
 }

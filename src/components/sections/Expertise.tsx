@@ -3,15 +3,12 @@
 import { useTranslations } from 'next-intl';
 import { motion, type Variants } from 'framer-motion';
 import {
-  Briefcase,
   Building,
   Store,
   ShoppingCart,
   Truck,
   Headphones,
   Calendar,
-  Layers,
-  CheckCircle2,
 } from 'lucide-react';
 
 const sectionVariants: Variants = {
@@ -19,19 +16,19 @@ const sectionVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.1,
+      staggerChildren: 0.1,
+      delayChildren: 0.05,
     },
   },
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
       ease: [0.16, 1, 0.3, 1],
     },
   },
@@ -102,7 +99,6 @@ export default function Expertise() {
         t('roles.delivery.skills.1'),
         t('roles.delivery.skills.2'),
         t('roles.delivery.skills.3'),
-        t('roles.delivery.skills.4'),
       ],
     },
     {
@@ -118,56 +114,55 @@ export default function Expertise() {
         t('roles.customerService.skills.1'),
         t('roles.customerService.skills.2'),
         t('roles.customerService.skills.3'),
-        t('roles.customerService.skills.4'),
       ],
     },
   ];
 
   return (
     <section
-      id="expertise"
-      className="py-28 sm:py-36 px-6 sm:px-8 lg:px-12 bg-pureWhite border-t border-black/[0.06] relative"
+      id="experience"
+      className="py-20 sm:py-28 px-6 sm:px-8 lg:px-12 bg-pureWhite border-t border-canvas-border"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.08 }}
           className="flex flex-col"
         >
-          {/* Section Header */}
-          <div className="max-w-3xl mb-16 sm:mb-20">
-            <motion.div variants={itemVariants} className="mb-4">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-darkBlue/15 bg-darkBlue/[0.03] text-darkBlue text-xs font-semibold uppercase tracking-wider">
+          {/* Header */}
+          <div className="max-w-3xl mb-14 sm:mb-16">
+            <motion.div variants={itemVariants} className="mb-3">
+              <span className="text-xs font-mono uppercase tracking-widest text-goldAccent font-semibold">
                 {t('tag')}
               </span>
             </motion.div>
 
             <motion.h2
               variants={itemVariants}
-              className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-deepBlack leading-[1.12] mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-darkBlue leading-[1.15] mb-4"
             >
               {t('title')}
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
-              className="text-lg sm:text-xl text-deepBlack/80 font-normal leading-relaxed text-balance"
+              className="text-base sm:text-lg text-charcoal-muted font-normal leading-relaxed text-balance"
             >
               {t('subtitle')}
             </motion.p>
           </div>
 
-          {/* Sleek Vertical Corporate Timeline */}
-          <div className="relative ltr:pl-8 sm:ltr:pl-12 rtl:pr-8 sm:rtl:pr-12">
-            {/* Timeline Vertical Track Line */}
+          {/* Clean Chronological Timeline */}
+          <div className="relative ltr:pl-6 sm:ltr:pl-10 rtl:pr-6 sm:rtl:pr-10">
+            {/* Timeline Thin Architectural Track */}
             <div
-              className="absolute top-4 bottom-8 ltr:left-3.5 sm:ltr:left-5 rtl:right-3.5 sm:rtl:right-5 w-[2px] bg-gradient-to-b from-darkBlue via-black/[0.12] to-transparent"
+              className="absolute top-4 bottom-8 ltr:left-2 sm:ltr:left-3 rtl:right-2 sm:rtl:right-3 w-[1px] bg-darkBlue/15"
               aria-hidden="true"
             />
 
-            <div className="space-y-10 sm:space-y-12">
+            <div className="space-y-8 sm:space-y-10">
               {roles.map((role) => {
                 const Icon = role.icon;
                 return (
@@ -176,59 +171,57 @@ export default function Expertise() {
                     variants={itemVariants}
                     className="relative group"
                   >
-                    {/* Timeline Node Point */}
+                    {/* Square Timeline Node (Strictly Zero Pills) */}
                     <div
-                      className="absolute top-6 ltr:-left-[29px] sm:ltr:-left-[39px] rtl:-right-[29px] sm:rtl:-right-[39px] w-5 h-5 rounded-full bg-pureWhite border-2 border-darkBlue flex items-center justify-center shadow-sm transition-all duration-300 group-hover:scale-125 group-hover:bg-darkBlue group-hover:border-darkBlue"
+                      className="absolute top-6 ltr:-left-[21px] sm:ltr:-left-[25px] rtl:-right-[21px] sm:rtl:-right-[25px] w-3 h-3 rounded-none bg-white border-2 border-darkBlue flex items-center justify-center transition-colors group-hover:bg-darkBlue"
                       aria-hidden="true"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-darkBlue group-hover:bg-pureWhite transition-colors duration-200" />
-                    </div>
+                    />
 
-                    {/* Timeline Card */}
-                    <div className="p-8 sm:p-10 rounded-2xl bg-pureWhite border border-black/[0.08] shadow-sm transition-all duration-300 group-hover:border-darkBlue group-hover:shadow-luxury group-hover:-translate-y-1 relative overflow-hidden">
-                      {/* Top subtle highlight */}
-                      <div className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-darkBlue transition-all duration-300" />
-
-                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                        <div className="flex items-center gap-3.5">
-                          <div className="w-11 h-11 rounded-xl bg-darkBlue/5 text-darkBlue flex items-center justify-center transition-colors duration-300 group-hover:bg-darkBlue group-hover:text-pureWhite shadow-sm">
-                            <Icon className="w-5 h-5" />
+                    {/* Architectural Card */}
+                    <div className="p-6 sm:p-8 rounded-md bg-white border border-canvas-border hover:border-darkBlue transition-all duration-200 shadow-sm">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+                        <div className="flex items-center gap-3">
+                          <div className="w-9 h-9 rounded-sm bg-darkBlue/5 text-darkBlue flex items-center justify-center border border-darkBlue/10 flex-shrink-0">
+                            <Icon className="w-4 h-4" />
                           </div>
                           <div>
-                            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-deepBlack group-hover:text-darkBlue transition-colors">
+                            <h3 className="text-lg sm:text-xl font-bold tracking-tight text-darkBlue">
                               {role.title}
                             </h3>
-                            <p className="text-xs sm:text-sm font-semibold text-deepBlack/50 uppercase tracking-wider">
+                            <p className="text-xs font-mono uppercase tracking-wider text-charcoal-muted">
                               {role.company}
                             </p>
                           </div>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-2.5">
-                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.03] text-deepBlack/70 text-xs font-medium">
-                            <Calendar className="w-3.5 h-3.5 text-deepBlack/40" />
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="inline-flex items-center gap-1.5 text-xs font-mono text-charcoal-light">
+                            <Calendar className="w-3.5 h-3.5 text-goldAccent" />
                             {role.period}
                           </span>
-                          <span className="px-3 py-1 rounded-full bg-darkBlue/[0.04] text-darkBlue text-xs font-semibold uppercase tracking-wider border border-darkBlue/10">
+                          <span className="text-xs font-mono uppercase tracking-wider text-goldAccent border-l rtl:border-l-0 rtl:border-r border-darkBlue/15 ltr:pl-2 rtl:pr-2">
                             {role.type}
                           </span>
                         </div>
                       </div>
 
-                      <p className="text-sm sm:text-base text-deepBlack/75 font-normal leading-relaxed mb-6">
+                      <p className="text-xs sm:text-sm text-charcoal leading-relaxed mb-5">
                         {role.description}
                       </p>
 
-                      {/* Key Competencies / Skills Tags */}
-                      <div className="flex flex-wrap items-center gap-2 pt-5 border-t border-black/[0.06]">
-                        {role.skills.map((skill, skillIdx) => (
-                          <span
-                            key={skillIdx}
-                            className="px-3 py-1 text-xs font-medium rounded-lg bg-pureWhite border border-black/[0.08] text-deepBlack/70 group-hover:border-darkBlue/20 transition-colors"
-                          >
-                            {skill}
-                          </span>
-                        ))}
+                      {/* Skills list as plain text with bullets (ZERO PILLS) */}
+                      <div className="pt-4 border-t border-darkBlue/10">
+                        <span className="block text-[11px] font-mono uppercase tracking-widest text-charcoal-light mb-2">
+                          Core Responsibilities & Skills
+                        </span>
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-charcoal">
+                          {role.skills.map((skill, sIdx) => (
+                            <div key={sIdx} className="flex items-center gap-1.5">
+                              <span className="w-1.5 h-1.5 rounded-none bg-goldAccent" />
+                              <span>{skill}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </motion.div>

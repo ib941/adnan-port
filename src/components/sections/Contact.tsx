@@ -1,27 +1,36 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, type Variants } from 'framer-motion';
-import { Phone, Mail, MapPin, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  ArrowUpRight,
+  MessageCircle,
+  Copy,
+  Check,
+} from 'lucide-react';
 
 const sectionVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.1,
+      staggerChildren: 0.1,
+      delayChildren: 0.05,
     },
   },
 };
 
-const fadeUpVariants: Variants = {
-  hidden: { opacity: 0, y: 24 },
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
       ease: [0.16, 1, 0.3, 1],
     },
   },
@@ -29,26 +38,37 @@ const fadeUpVariants: Variants = {
 
 export default function Contact() {
   const t = useTranslations('Contact');
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+
+  const handleCopy = (text: string, key: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), 2500);
+  };
 
   const contactCards = [
     {
+      key: 'phone',
       icon: Phone,
       label: t('phoneLabel'),
       value: t('phoneValue'),
+      rawVal: '+966504517869',
       href: 'tel:+966504517869',
-      isExternal: false,
     },
     {
+      key: 'email',
       icon: Mail,
       label: t('emailLabel'),
       value: t('emailValue'),
+      rawVal: 'Adnanalthour@gmail.com',
       href: 'mailto:Adnanalthour@gmail.com',
-      isExternal: false,
     },
     {
+      key: 'location',
       icon: MapPin,
       label: t('locationLabel'),
       value: t('locationValue'),
+      rawVal: 'Riyadh, Saudi Arabia',
       href: 'https://maps.google.com/?q=Riyadh,+Saudi+Arabia',
       isExternal: true,
     },
@@ -57,9 +77,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-28 sm:py-36 px-6 sm:px-8 lg:px-12 bg-pureWhite border-t border-black/[0.06] relative"
+      className="py-20 sm:py-28 px-6 sm:px-8 lg:px-12 bg-canvas-subtle border-t border-canvas-border"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -67,82 +87,123 @@ export default function Contact() {
           viewport={{ once: true, amount: 0.1 }}
           className="flex flex-col"
         >
-          {/* Section Header */}
-          <div className="max-w-3xl mb-16 sm:mb-20">
-            <motion.div variants={fadeUpVariants} className="mb-4">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-darkBlue/15 bg-darkBlue/[0.03] text-darkBlue text-xs font-semibold uppercase tracking-wider">
+          {/* Header */}
+          <div className="max-w-3xl mb-12 sm:mb-14">
+            <motion.div variants={itemVariants} className="mb-3">
+              <span className="text-xs font-mono uppercase tracking-widest text-goldAccent font-semibold">
                 {t('tag')}
               </span>
             </motion.div>
 
             <motion.h2
-              variants={fadeUpVariants}
-              className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-deepBlack leading-[1.12] mb-6"
+              variants={itemVariants}
+              className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-darkBlue leading-[1.15] mb-4"
             >
               {t('title')}
             </motion.h2>
 
             <motion.p
-              variants={fadeUpVariants}
-              className="text-lg sm:text-xl text-deepBlack/80 font-normal leading-relaxed text-balance"
+              variants={itemVariants}
+              className="text-base sm:text-lg text-charcoal-muted font-normal leading-relaxed text-balance"
             >
               {t('subtitle')}
             </motion.p>
           </div>
 
-          {/* 3 Clickable Contact Cards Grid */}
-          <motion.div
-            variants={fadeUpVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10"
-          >
-            {contactCards.map((item, index) => {
+          {/* Contact Cards Grid (Strictly Zero Pills) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* WhatsApp Priority Card */}
+            <motion.div
+              variants={itemVariants}
+              className="p-6 rounded-md bg-darkBlue text-pureWhite flex flex-col justify-between shadow-sm relative overflow-hidden"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-sm bg-white/10 text-goldAccent flex items-center justify-center mb-6">
+                  <MessageCircle className="w-5 h-5" />
+                </div>
+
+                <h3 className="text-base font-bold mb-1">
+                  {t('whatsAppLabel')}
+                </h3>
+                <p className="text-xs text-white/70 mb-6 leading-relaxed">
+                  {t('whatsAppDesc')}
+                </p>
+              </div>
+
+              <a
+                href="https://wa.me/966504517869?text=Hello%20Adnan,%20I%20would%20like%20to%20get%20in%20touch."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-sm bg-goldAccent text-darkBlue text-xs font-bold uppercase tracking-wider hover:bg-goldAccent-light transition-colors"
+              >
+                <span>{t('whatsAppButton')}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 rtl:rotate-[-90deg]" />
+              </a>
+            </motion.div>
+
+            {/* Other 3 Cards */}
+            {contactCards.map((item) => {
               const Icon = item.icon;
+              const isCopied = copiedKey === item.key;
               return (
-                <a
-                  key={index}
-                  href={item.href}
-                  target={item.isExternal ? '_blank' : undefined}
-                  rel={item.isExternal ? 'noopener noreferrer' : undefined}
-                  className="group relative p-8 sm:p-10 rounded-2xl bg-pureWhite border border-black/[0.08] hover:border-darkBlue shadow-sm hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden min-h-[220px]"
+                <motion.div
+                  key={item.key}
+                  variants={itemVariants}
+                  className="p-6 rounded-md bg-white border border-canvas-border hover:border-darkBlue transition-all duration-200 flex flex-col justify-between shadow-sm"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-darkBlue transition-colors duration-300" />
-
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="w-12 h-12 rounded-xl bg-darkBlue/5 text-darkBlue flex items-center justify-center transition-colors duration-300 group-hover:bg-darkBlue group-hover:text-pureWhite shadow-sm">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div className="w-8 h-8 rounded-full border border-black/[0.08] flex items-center justify-center text-deepBlack/40 group-hover:border-darkBlue group-hover:text-darkBlue transition-colors">
-                      <ArrowUpRight className="w-4 h-4 rtl:rotate-[-90deg]" />
-                    </div>
-                  </div>
-
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-deepBlack/50 mb-1.5">
+                    <div className="w-10 h-10 rounded-sm bg-darkBlue/5 text-darkBlue flex items-center justify-center mb-6 border border-darkBlue/10">
+                      <Icon className="w-5 h-5 text-goldAccent" />
+                    </div>
+
+                    <span className="block text-[11px] font-mono uppercase tracking-wider text-charcoal-light mb-1">
                       {item.label}
-                    </p>
-                    <p className="text-base sm:text-lg lg:text-xl font-bold text-deepBlack group-hover:text-darkBlue transition-colors font-mono sm:font-sans break-words">
+                    </span>
+                    <a
+                      href={item.href}
+                      target={item.isExternal ? '_blank' : undefined}
+                      rel={item.isExternal ? 'noopener noreferrer' : undefined}
+                      className="text-sm sm:text-base font-bold text-darkBlue hover:text-goldAccent transition-colors break-words block font-mono sm:font-sans"
+                    >
                       {item.value}
-                    </p>
+                    </a>
                   </div>
-                </a>
+
+                  <div className="pt-6 border-t border-darkBlue/10 mt-6 flex items-center justify-between">
+                    {item.key !== 'location' ? (
+                      <button
+                        type="button"
+                        onClick={() => handleCopy(item.rawVal, item.key)}
+                        className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-charcoal-muted hover:text-darkBlue transition-colors"
+                      >
+                        {isCopied ? (
+                          <>
+                            <Check className="w-3.5 h-3.5 text-emerald-600" />
+                            <span className="text-emerald-600">{t('copiedToast')}</span>
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="w-3.5 h-3.5" />
+                            <span>{t('copyButton')}</span>
+                          </>
+                        )}
+                      </button>
+                    ) : (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-charcoal-muted hover:text-darkBlue transition-colors"
+                      >
+                        <span>Maps</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 rtl:rotate-[-90deg]" />
+                      </a>
+                    )}
+                  </div>
+                </motion.div>
               );
             })}
-          </motion.div>
-
-          {/* Executive Availability Notice */}
-          <motion.div
-            variants={fadeUpVariants}
-            className="p-6 sm:p-8 rounded-2xl bg-darkBlue/[0.02] border border-darkBlue/15"
-          >
-            <div className="flex items-start sm:items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-darkBlue/5 text-darkBlue flex items-center justify-center flex-shrink-0">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <p className="text-xs sm:text-sm text-deepBlack/80 leading-relaxed font-medium">
-                {t('availabilityNotice')}
-              </p>
-            </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

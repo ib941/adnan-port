@@ -10,19 +10,31 @@ const config: Config = {
     extend: {
       colors: {
         pureWhite: '#FFFFFF',
-        deepBlack: {
-          DEFAULT: '#000000',
-          rich: '#050505',
-          subtle: '#1C1C1E',
-          muted: '#52525B',
+        canvas: {
+          DEFAULT: '#FFFFFF',
+          subtle: '#F8FAFC',
+          muted: '#F1F5F9',
+          border: '#E2E8F0',
         },
         darkBlue: {
           DEFAULT: '#0A192F',
           hover: '#071222',
           active: '#050D19',
           light: '#172A45',
-          subtle: 'rgba(10, 25, 47, 0.05)',
-          border: 'rgba(10, 25, 47, 0.15)',
+          subtle: 'rgba(10, 25, 47, 0.04)',
+          border: 'rgba(10, 25, 47, 0.12)',
+        },
+        goldAccent: {
+          DEFAULT: '#B89762',
+          light: '#C5A880',
+          dark: '#9E7E4C',
+          subtle: 'rgba(184, 151, 98, 0.1)',
+          border: 'rgba(184, 151, 98, 0.25)',
+        },
+        charcoal: {
+          DEFAULT: '#0F172A',
+          muted: '#475569',
+          light: '#64748B',
         },
       },
       fontFamily: {
@@ -30,18 +42,9 @@ const config: Config = {
         arabic: ['var(--font-ibm-arabic)', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(10, 25, 47, 0.06)',
-        'luxury': '0 20px 40px -15px rgba(10, 25, 47, 0.08)',
-        'btn': '0 4px 14px 0 rgba(10, 25, 47, 0.25)',
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(16px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
+        'crisp': '0 1px 3px 0 rgba(10, 25, 47, 0.05), 0 1px 2px -1px rgba(10, 25, 47, 0.05)',
+        'floating': '0 10px 30px -5px rgba(10, 25, 47, 0.08), 0 4px 6px -2px rgba(10, 25, 47, 0.03)',
+        'card': '0 4px 20px -2px rgba(10, 25, 47, 0.06)',
       },
     },
   },
