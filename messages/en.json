@@ -1,0 +1,102 @@
+{
+  "Navbar": {
+    "brand": "ADNAN AL-THOUR",
+    "hero": "Overview",
+    "about": "About",
+    "expertise": "Expertise",
+    "contact": "Contact",
+    "cta": "Get in Touch",
+    "langToggleLabel": "العربية"
+  },
+  "Hero": {
+    "greeting": "Hello, I'm",
+    "name": "Adnan Al-Thour",
+    "title": "Operations Supervisor | E-commerce Expert",
+    "description": "Architecting resilient fulfillment architectures, optimizing complex end-to-end supply chains, and scaling high-velocity enterprise commerce operations with corporate precision.",
+    "primaryCta": "Explore Expertise",
+    "secondaryCta": "Initiate Discussion"
+  },
+  "About": {
+    "tag": "Strategic Profile",
+    "title": "Dual-Domain Operational Mastery",
+    "lead": "Bridging high-stakes physical construction logistics with high-velocity digital e-commerce ecosystems.",
+    "narrative": "True operational leadership demands versatility. My career is defined by an uncommon dual specialization: orchestrating heavy on-the-ground physical site logistics and engineering scalable digital retail workflows. Whether managing on-site contractor crews under strict safety deadlines or calibrating automated multi-channel fulfillment pipelines, I bring uncompromising corporate discipline, analytical precision, and systemic efficiency to every operation.",
+    "pillar1Title": "Physical Operations & Site Supervision",
+    "pillar1Subtitle": "On-the-ground execution, material logistics, and contractor leadership",
+    "pillar1Desc": "Directing complex on-site workflows, enforcing safety compliance standards, managing multi-tier subcontractor schedules, and ensuring zero-delay material delivery chains.",
+    "pillar1Points": [
+      "Rigorous material resource planning and site delivery tracking",
+      "Subcontractor coordination, quality assurance, and hazard control",
+      "Budget discipline and milestone-driven civil execution"
+    ],
+    "pillar2Title": "Digital Commerce & Systems Scaling",
+    "pillar2Subtitle": "Multi-channel catalog management, order fulfillment, and logistics pipelines",
+    "pillar2Desc": "Designing and optimizing high-frequency digital commerce operations—from inventory replenishment algorithms and warehousing protocols to automated last-mile dispatch.",
+    "pillar2Points": [
+      "End-to-end inventory auditing and multichannel sync",
+      "Fulfillment SLA optimization and courier performance tracking",
+      "Customer lifecycle management and predictive operations analytics"
+    ],
+    "quote": "Operational excellence is not about reacting to bottlenecks—it is about designing resilient systems that make bottlenecks structurally impossible.",
+    "quoteRole": "Executive Operational Standard"
+  },
+  "Expertise": {
+    "tag": "Career Trajectory",
+    "title": "Professional Experience & Key Roles",
+    "subtitle": "A progressive track record across civil project supervision, retail store direction, and digital commerce operations.",
+    "roles": {
+      "moka": {
+        "title": "Construction Site Supervisor",
+        "company": "Moka",
+        "period": "Key Project Tenure",
+        "type": "Physical Operations & Logistics",
+        "description": "Directed complete on-site operations for critical structural projects, coordinating workforce deployment, heavy materials logistics, and subcontractor compliance under tight milestone commitments.",
+        "skills": ["Site Logistics", "Safety Compliance", "Subcontractor Oversight", "Resource Planning", "Quality Auditing"]
+      },
+      "masar": {
+        "title": "General Store Manager",
+        "company": "Masar",
+        "period": "Executive Management",
+        "type": "Retail & Facility Leadership",
+        "description": "Held full P&L accountability, supply chain distribution, and inventory integrity for retail operations. Supervised daily personnel, reduced shrinkage, and established streamlined receiving procedures.",
+        "skills": ["Store Operations", "Inventory Control", "P&L Management", "Team Leadership", "Vendor Relations"]
+      },
+      "ecommerce": {
+        "title": "E-commerce Store Manager",
+        "company": "Enterprise Commerce",
+        "period": "Digital Operations",
+        "type": "Digital Commerce & Fulfillment",
+        "description": "Scaled digital store operations, managing catalog accuracy, automated order fulfillment, packaging standards, and conversion workflows across high-velocity sales channels.",
+        "skills": ["Catalog Architecture", "Order Fulfillment", "Inventory Optimization", "Analytics & KPIs", "Digital Merchandising"]
+      },
+      "delivery": {
+        "title": "Delivery Coordinator",
+        "company": "Logistics & Fleet",
+        "period": "Supply Chain Dispatch",
+        "type": "Last-Mile Distribution",
+        "description": "Orchestrated delivery fleets and third-party logistics carriers, optimizing route efficiency, tracking transit time metrics, and achieving superior on-time customer delivery rates.",
+        "skills": ["Last-Mile Logistics", "Route Planning", "Carrier SLA Audits", "Dispatch Scheduling", "Exception Management"]
+      },
+      "customerService": {
+        "title": "Customer Service Representative",
+        "company": "Client Relations",
+        "period": "Customer Experience",
+        "type": "Stakeholder Communication",
+        "description": "Handled high-volume client inquiries and escalation cases, converting customer pain points into actionable operational feedback and cultivating enduring brand loyalty.",
+        "skills": ["Escalation Resolution", "Customer Retention", "CRM Systems", "Feedback Analysis", "Communication Strategy"]
+      }
+    }
+  },
+  "Contact": {
+    "tag": "Executive Contact",
+    "title": "Initiate an Executive Dialogue",
+    "subtitle": "Available for executive operations leadership mandates, e-commerce scale-up advisory, and high-impact logistics consulting.",
+    "phoneLabel": "Direct Telephone",
+    "phoneValue": "+966 50 451 7869",
+    "emailLabel": "Corporate Email",
+    "emailValue": "Adnanalthour@gmail.com",
+    "locationLabel": "Base & Jurisdiction",
+    "locationValue": "Riyadh, Saudi Arabia",
+    "availabilityNotice": "Currently accepting confidential operational leadership inquiries and advisory retainers across the GCC region."
+  }
+}
